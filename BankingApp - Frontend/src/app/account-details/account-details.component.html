@@ -1,0 +1,120 @@
+<div>
+    <div class="actdtl-title">
+            <app-navbar></app-navbar>
+    </div>   
+
+    <!-- <div class="logo" style="color: rgb(113, 61, 9);font-family: cursive;">
+        Welcome {{this.uname}}
+    </div> -->
+
+    <div class="account_Details_Container" style="width:1250px; height: max-content;"> 
+        <section class="main_accountDetailsSection">
+            <div class="cardsSection">
+               <div (click)="getCard(1)" class="card changePassword">
+                   <div>
+                       <h3>Change Password</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+               <div (click)="getCard(2)" class="card accountSummary">
+                   <div>
+                       <h3>Account Summary</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+               <div (click)="getCard(3)" class="card recentTransaction">
+                   <div>
+                       <h3>Recent Transaction</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+               <div (click)="getCard(4)" class="card recentTransaction">
+                   <div>
+                       <h3>Order CheckBook</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+            </div>
+        </section>
+        <div class="popUpCard popUp_changePassword" id="popUp_changePassword">
+           <div class="popUpCard_header">
+               <span>change Password</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(1)"></button>
+           </div>
+            <div class="popUpCard_main">
+                <button (click) = "verifyOldPassword()">Submit</button>
+            </div>
+            <div class="popUpCard_footer">
+                <input type="text" placeholder="Enter old password" id="OldPassword" [(ngModel)]="oldpwd" required>
+                <input id="newPassword" type="text" placeholder="Enter new password" [(ngModel)]="pwdchangeRequest.Password" required>
+                <input type="text" placeholder="Confirm new password" id="ConfirmnewPassword" [(ngModel)]="ConfirmPassword" required>            
+            </div>
+        </div>
+        <div class="popUpCard popUp_accountSummary" id="popUp_accountSummary">
+           <div class="popUpCard_header">
+               <span>Account Summary</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(2)"></button>
+           </div>
+           <div class="popUpCard_main accountSummaryContainer">
+                <ul *ngFor="let account of actdtllst">
+                    <li>Customer Id: {{account.customerId}}</li>
+                    <li>Customer Name: {{account.customerName}}</li>
+                    <li>Customer Address: {{account.customerAddress}}</li>
+                    <li>Customer PhoneNo: {{account.customerPhNo}}</li>
+                    <li>Customer Age: {{account.customerAge}}</li>
+                    <li>Customer DOB: {{account.dob.slice(0,account.dob.length-9)}}</li>
+                    <li>Account No: {{account.accountNo }} </li>
+                    <li>Bank Name: {{account.ifsc }}</li>
+                    <li>Branch: {{account.branch}}</li>
+                    <button (click)="checkBalance(account.balance)">Check Balance</button>
+                </ul>
+           </div>
+            <div class="popUpCard_footer">
+                <li *ngIf="balance!=null">{{balance}}</li>
+            </div>
+
+        </div>
+        <div class="popUpCard popUp_recentTransaction" id="popUp_recentTransaction">
+           <div class="popUpCard_header">
+               <span>Recent Transaction</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(3)"></button>
+           </div>
+           <div class="popUpCard_main transactionHistoryContainer" >
+
+                <ul *ngFor="let transaction of translst">
+                    <li>Customer Id: {{transaction.customerId}}</li>
+                    <li>Account No: {{transaction.accountNo}}</li>
+                    <li>Transaction Id: {{transaction.transactionId}}</li>
+                    <li>Receiver Username: {{transaction.receiverUserName}}</li>
+                    <li>Receiver Account No: {{transaction.receiverAccountNo}}</li>
+                    <li>Amount: {{transaction.amount}}</li>
+                    <li>Date Of Transaction: {{transaction.dateOfTransaction}}</li>
+                    <li>Debit or Credit: {{transaction.debitOrCredit }} </li>
+                    <li>Transaction Status: {{transaction.transactionStatus}}</li>
+                </ul>  
+                <p *ngIf="translst==null">No recent Transactions</p>          
+            </div>
+            <div class="popUpCard_footer" >
+                <button (click)="getTransactionList()">Check history</button>
+            </div>
+           <!-- <button class="popUpCard_main" (click)="getTransactionList()">Check history</button>  -->
+           <!-- <div class="popUpCard_footer transactionHistoryContainer" >
+                <button (click)="getTransactionList()">Check history</button>
+           </div> -->
+        </div>
+        <div class="popUpCard popUp_orderCheckbook" id="popUp_orderCheckbook">
+            <div class="popUpCard_header">
+                <span>Request CheckBook</span>
+                <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(4)"></button>
+            </div>
+            <div class="popUpCard_main" >
+                    <button>Order Checkbook </button>
+            </div>
+            <div class="orderCheckbookContainer popUpCard_footer" >
+            </div>
+         </div>
+    </div>
+</div>  
+
+ 
+

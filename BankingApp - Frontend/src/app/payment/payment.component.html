@@ -1,0 +1,50 @@
+<div>
+    <div class="paymentdtl-title">
+            <app-navbar></app-navbar>
+    </div>   
+
+
+    <div class="Payment_Container" style="width:1250px; height: max-content;"> 
+        <section class="main_PaymentSection">
+            <div class="cardsSection">
+               <div (click)="getCard(1)" class="card makepayment">
+                   <div>
+                       <h3>New Transaction</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+            </div>
+        </section>
+        <div class="popUpCard popUp_payment" id="popUp_payment">
+           <div class="popUpCard_header">
+               <span>New Payment</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(1)"></button>
+           </div>
+            <div class="popUpCard_main popUpCard_main_payment">
+                <form #form (ngSubmit)="CreatePayment()" class="payment-form">
+                    <ul>
+                        <li><input type="text" placeholder="Enter CustomerId" name="customerId" [(ngModel)]="paymentRequest.CustomerId" required></li>
+                        <li><input type="text" placeholder="Enter AccountNo" name="accountNo" required [(ngModel)]="paymentRequest.AccountNo"></li>
+                        <li><input type="text" placeholder="Enter Receiver Account No" name="receiveraccountNo" required [(ngModel)]="paymentRequest.ReceiverAccountNo"></li>
+                        <li><input type="text" placeholder="Enter Receiver Username" name="receiverUsername" required [(ngModel)]="paymentRequest.ReceiverUserName"></li>
+                        <li><input type="text" placeholder="Enter Amount" name="amount" required [(ngModel)]="paymentRequest.Amount"></li>
+                        <li><button>Submit</button></li>
+                    </ul>
+                    
+                </form> 
+                <!-- <ul>
+                    <li><input type="text" placeholder="Enter CustomerId" name="customerId" required [(ngModel)]="paymentRequest.CustomerId"></li>
+                    <li><input type="text" placeholder="Enter AccountNo" name="accountNo" required [(ngModel)]="paymentRequest.AccountNo"></li>
+                    <li><input type="text" placeholder="Enter Receiver Account No" name="receiveraccountNo" required [(ngModel)]="paymentRequest.ReceiverAccountNo"></li>
+                    <li><input type="text" placeholder="Enter Receiver Username" name="receiverUsername" required [(ngModel)]="paymentRequest.ReceiverUserName"></li>
+                    <li><input type="text" placeholder="Enter Amount" name="amount" required [(ngModel)]="paymentRequest.Amount"></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</div>  
+
+ 
+
+
+

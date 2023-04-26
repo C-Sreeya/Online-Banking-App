@@ -1,0 +1,62 @@
+<div>
+    <div class="loandtl-title">
+            <app-navbar></app-navbar>
+    </div>   
+
+
+    <div class="Loan_Details_Container" style="width:1250px; height: max-content;"> 
+        <section class="main_LoanDetailsSection">
+            <div class="cardsSection">
+               <div (click)="getCard(1)" class="card checkloanstatus">
+                   <div>
+                       <h3>Check Loan Status</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+               <div (click)="getCard(2)" class="card loanapplication">
+                   <div>
+                       <h3>Apply for new loan</h3>
+                       <img src="../../assets/images/dollar.png" alt="bankPng">
+                   </div>
+               </div>
+            </div>
+        </section>
+        <div class="popUpCard popUp_checkloanstatus" id="popUp_checkloanstatus">
+           <div class="popUpCard_header">
+               <span>Check Loan Status</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(1)"></button>
+           </div>
+            <div class="popUpCard_main popUpCard_main_checkloanstatus">
+                <ul *ngFor="let loan of loandtllst">
+                    <li>Loan Id: {{loan.loanId}}</li>
+                    <li>Customer Id: {{loan.customerId}}</li>
+                    <li>Account No: {{loan.accountNo }} </li>
+                    <li>Issued Amount: {{loan.amount }}</li>
+                    <li>Total Duration: {{loan.durationInMonths}}</li>
+                    <li *ngIf="loan.loanDate != null">Loan Issued Date: {{loan.loanDate.slice(0,loan.loanDate.length-9) }}</li>
+                    <li *ngIf="loan.loanStatus != null">Loan Status: {{loan.loanStatus }}</li>
+                    <li>Approval Status: {{loan.approvalStatus}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="popUpCard popUp_loanapplication" id="popUp_loanapplication">
+           <div class="popUpCard_header">
+               <span>Application For Loan</span>
+               <button><img src="../../assets/images/close.png" alt="" (click) = "removeCard(2)"></button>
+           </div>
+           <div class="popUpCard_main" id="popUpCard_main_loanApplication">
+                <ul>
+                    <li><input type="text" placeholder="Enter CustomerId" name="customerId" required [(ngModel)]="loanRequest.CustomerId"></li>
+                    <li><input type="text" placeholder="Enter AccountNo" name="accountNo" required [(ngModel)]="loanRequest.AccountNo"></li>
+                    <li><input type="text" placeholder="Enter Amount" name="amount" required [(ngModel)]="loanRequest.Amount"></li>
+                    <li><input type="text" placeholder="Enter Duration" name="duration" required [(ngModel)]="loanRequest.DurationInMonths"></li>
+                </ul>               
+               <button (click)="applyForLoan()">Apply</button>
+           </div>
+        </div>
+    </div>
+</div>  
+
+ 
+
+

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+</head>  
+    <body> 
+        <app-common-navbar></app-common-navbar>    
+        <form #form="ngForm" (ngSubmit)="loginUser()" class="loginForm">
+            <div class="text-center">
+                <h1> Login </h1>
+            </div> 
+            <div class="container"> 
+                <label style="color: white;">Username : </label> 
+                <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="loginRequest.UserName"><br/>
+                
+                <label style="color: white;">Password : </label> 
+                <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="loginRequest.Password"><br/>  
+                
+                <div class="text-center">
+                    <button type="submit">Login</button><br/>
+                    <p style="color: white;">New User? <a [routerLink]="['signup']">Signup</a> </p>
+                </div>                     
+            </div> 
+        </form>   
+    </body>   
+</html>

@@ -1,0 +1,41 @@
+<app-common-navbar></app-common-navbar>
+<form #form="ngForm" (ngSubmit)="registerUser()" class="register-user-form">
+    <div class="text-center">
+        <h1> Signup </h1>
+    </div>  
+    <div class="container">
+        <div>
+            <label style="color: white;">Username : </label>  
+            <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="registerRequest.UserName">
+        </div>
+
+        <div>
+            <label style="color: white;">Password : </label> 
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="registerRequest.Password">
+        </div>
+        
+        <div>
+            <label style="color: white;">Confirm Password : </label> 
+            <input type="password" placeholder="Confirm Password" name="confirmpassword" [(ngModel)]="registerRequest.ConfirmPassword">    
+        </div>
+
+        <div>
+            <label style="color: white;">CustomerId : </label>  
+            <input type="text" placeholder="Enter Customer Id" name="custId" [(ngModel)]="registerRequest.CustomerId">    
+        </div>
+
+        <div>
+            <label style="color: white;">Mobile Number : </label>  
+            <input type="text" placeholder="Enter Mobile number" name="mobnum" [(ngModel)]="registerRequest.MobileNo">
+        </div>
+
+        <div>
+            <label style="color: white;">Role : </label>  
+            <input type="text" placeholder="Enter Role" name="role"  [(ngModel)]="registerRequest.UserRole">    
+        </div>
+        <div class="text-center">
+            <p><button type="submit">Signup</button></p>
+            <p style="color: white;">Existing User? <a [routerLink]="['signin']">SignIn</a> </p>
+        </div>                     
+    </div> 
+</form>   

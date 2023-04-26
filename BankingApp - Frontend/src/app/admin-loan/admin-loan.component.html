@@ -1,0 +1,38 @@
+<div>
+    <div>
+        <app-navbar></app-navbar>
+    </div>
+    <div class="center">
+        <table>
+            <thead>
+                <td>Loan Id</td>
+                <td>Customer Id</td>
+                <td>Account No</td>
+                <td>Amount</td>
+                <td>Loan Issued Date</td>
+                <td>Total Duration</td>
+                <td>Loan Status</td>
+                <td>Application Status</td>
+                <td></td>
+            </thead>
+            <tbody>
+                <tr *ngFor="let loan of loandtllst">
+                    <td>{{loan.loanId}}</td>
+                    <td>{{loan.customerId}}</td>
+                    <td>{{loan.accountNo}}</td>
+                    <td>{{loan.amount}}</td>
+                    <td>{{loan.durationInMonths}}</td>
+                    <td>{{loan.loanDate.slice(0,loan.loanDate.length-9)}}</td>
+                    <td>{{loan.loanStatus}}</td>
+                    <td>{{loan.approvalStatus}}</td>
+                    <td>
+                        <button (click)="approveloan(loan.loanId)">Approve</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+ 
+
