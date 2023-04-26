@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UILayer", "UILayer\UILayer.csproj", "{6092F7BA-819A-4CF6-B046-1269BF2AFC63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{5CA412A7-4AF8-4830-9897-DF1F85E8F6DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DALayer", "DALayer\DALayer.csproj", "{88F4BA3F-EBEB-4B6A-B015-34280CD93403}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6092F7BA-819A-4CF6-B046-1269BF2AFC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6092F7BA-819A-4CF6-B046-1269BF2AFC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6092F7BA-819A-4CF6-B046-1269BF2AFC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6092F7BA-819A-4CF6-B046-1269BF2AFC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA412A7-4AF8-4830-9897-DF1F85E8F6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA412A7-4AF8-4830-9897-DF1F85E8F6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA412A7-4AF8-4830-9897-DF1F85E8F6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA412A7-4AF8-4830-9897-DF1F85E8F6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F4BA3F-EBEB-4B6A-B015-34280CD93403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F4BA3F-EBEB-4B6A-B015-34280CD93403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F4BA3F-EBEB-4B6A-B015-34280CD93403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F4BA3F-EBEB-4B6A-B015-34280CD93403}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43E614AD-6165-45FB-A523-B70391E9F218}
+	EndGlobalSection
+EndGlobal

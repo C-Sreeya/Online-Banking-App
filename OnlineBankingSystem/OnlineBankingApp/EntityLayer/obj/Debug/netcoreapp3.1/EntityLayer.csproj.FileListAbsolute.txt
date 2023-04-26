@@ -1,0 +1,9 @@
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.deps.json
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.pdb
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfo.cs
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\CSREEYA\Documents\ShadowProject\OnlineBankingApp\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.pdb
